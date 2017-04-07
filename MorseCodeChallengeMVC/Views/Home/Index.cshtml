@@ -1,0 +1,23 @@
+﻿@model MorseCodeChallengeMVC.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Morse Generator</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Characters)
+    <button type="submit">Generate</button>
+}
+<br/>
+<hr/>
+@{
+    <h2>Result: </h2>
+        if (!string.IsNullOrEmpty(Model.Characters))
+        {
+        <h2><span>@Model.Result</span></h2>
+        }
+}
