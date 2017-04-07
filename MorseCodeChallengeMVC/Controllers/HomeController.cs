@@ -27,7 +27,7 @@ namespace MorseCodeChallengeMVC.Controllers
 
             model.Result = TranslateTextToMorse(characters); 
           
-           return View(model);
+           return View(model); 
         }
 
         private static string TranslateTextToMorse(string textInput)
